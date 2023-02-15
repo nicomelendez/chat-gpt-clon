@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-export function TypingEffect ({ text }) {
+const useTypingEffect = (text) => {
   const [displayText, setDisplayText] = useState('')
   const [index, setIndex] = useState(0)
   const [showCursor, setShowCursor] = useState(true)
@@ -32,6 +32,11 @@ export function TypingEffect ({ text }) {
     return () => clearInterval(intervaleId)
   }, [text, index])
 
+  return { displayText, showCursor }
+}
+
+export function TypingEffect ({ text }) {
+  const { displayText, showCursor } = useTypingEffect(text)
   return (
     <span className={`${showCursor ? 'after:content-["▋"] after:ml-1 after:animate-pulse' : ''}`}>{displayText}</span>
   )
