@@ -27,7 +27,7 @@ export function ChatForm () {
   }
 
   return (
-    <section className='absolute ml-32 bottom-0 w-full left-0 right-0'>
+    <section className='fixed ml-32 formChatresponsive bottom-0 w-full left-0 right-0 reponsiveForm'>
       <form onKeyDown={handleKeyDown} onSubmit={handleSubmit} className='flex flex-row max-w-3xl m-auto pt-6 mb-6'>
         <div className='relative flex flex-col flex-grow w-full px-4 py-3 text-white border rounded-md shadow-lg bg-chatgptligthgray border-gray-900/50'>
           <textarea rows={1} tabIndex={0} autoFocus defaultValue='' onChange={handleChange} ref={textAreaRef} className='w-full h-[24px] resize-none bg-transparent m-0 boder-0 outline-none' />

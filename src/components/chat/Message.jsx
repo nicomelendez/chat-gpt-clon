@@ -2,6 +2,7 @@ import { TypingEffect } from '../TypingEffect.jsx'
 import { ChatGPTLogo } from '../utils/Icons'
 import { Avatar } from '../utils/Avatar'
 import Image from 'next/image.js'
+import { useEffect, useRef } from 'react'
 
 function UserAvatar () {
   return (
@@ -9,12 +10,19 @@ function UserAvatar () {
   )
 }
 export function Message ({ ia, message }) {
+  const messagesRef = useRef(null)
+
+  useEffect(() => {
+    // hace scroll hacia arriba al agregar un nuevo mensaje
+    messagesRef.current.scrollTop = messagesRef.current.scrollHeight
+  }, [message])
+
   const avatar = ia ? <ChatGPTLogo /> : <UserAvatar />
   const textElement = ia ? <TypingEffect text={message} /> : message
 
   return (
-    <div className={`text-gray-100  ${ia ? 'bg-chatgptligthgray shadow-lg' : 'bg-chatgptgray'}`}>
-      <article className='flex gap-4 p-6 m-auto max-w-3xl'>
+    <div ref={messagesRef} className={`text-gray-100  ${ia ? 'bg-chatgptligthgray shadow-lg' : 'bg-chatgptgray'}`}>
+      <article className='flex gap-4 p-6 m-auto max-w-3xl messageresponsive'>
         <Avatar>
           {avatar}
         </Avatar>

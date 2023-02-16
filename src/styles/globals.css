@@ -109,3 +109,32 @@ a {
     color-scheme: dark;
   }
 }
+@media screen and (max-width:766px){
+  .asideResponsive{
+    display: flex;
+    flex-direction: column;
+  }
+  .responsiveAsideContent{
+    position: static;
+    height: 10%;
+    width: 40%;
+    margin: auto;
+    padding: 10px 0;
+  }
+  .chatResponsive{
+    padding: 0;
+  }
+
+  .messageresponsive{
+    width: 88%;
+  }
+  .formChatresponsive{
+    margin: 0;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .messagesResponsive{
+    overflow: scroll;
+  }
+  
+}

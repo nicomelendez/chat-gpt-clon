@@ -38,6 +38,6 @@ export const useTypingEffect = (text) => {
 export function TypingEffect ({ text }) {
   const { displayText, showCursor } = useTypingEffect(text)
   return (
-    <span className={`${showCursor ? 'after:content-["▋"] after:ml-1 after:animate-pulse' : ''}`}>{displayText}</span>
+    <span className={`${showCursor ? 'after:content-["▋"] after:ml-1 after:animate-pulse' : ''}`}>{displayText.trim().replace(/^[\W_]+/, '')}</span>
   )
 }

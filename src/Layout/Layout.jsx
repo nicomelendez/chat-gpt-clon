@@ -7,7 +7,7 @@ export function Layout ({ children }) {
       <Head>
         <title>ChatGPT</title>
       </Head>
-      <div className='w-full relative bg-chatgptgray h-screen '>
+      <div className='w-full relative bg-chatgptgray h-screen asideResponsive'>
         <Aside />
         {children}
       </div>
