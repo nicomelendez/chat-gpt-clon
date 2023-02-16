@@ -36,7 +36,8 @@ export function ChatGPTLogo () {
     </svg>
   )
 }
-
+// eslint-disable-next-line react/jsx-closing-tag-location
+// eslint-disable-next-line react/jsx-closing-bracket-location
 export function SendIcon () {
   return (
     <svg
