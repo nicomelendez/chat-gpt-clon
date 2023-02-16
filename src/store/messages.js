@@ -44,7 +44,17 @@ export const useMessageStore = create((set, get) => {
           })
         }))
       } catch (error) {
-        console.error(error)
+        set(state => ({
+          messages: state.messages.map(entry => {
+            if (entry.id === messageIAid) {
+              return {
+                ...entry,
+                message: 'Error en API OpenAI'
+              }
+            }
+            return entry
+          })
+        }))
       }
     }
   }

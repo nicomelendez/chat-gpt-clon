@@ -34,7 +34,7 @@ function Aside () {
 
 function UserAvatar () {
   return (
-    <Image src='https://media.licdn.com/dms/image/C4D03AQFth6dW_GVUtQ/profile-displayphoto-shrink_200_200/0/1642895466352?e=1681948800&v=beta&t=SLtr9RRFVSihKAGidziQcfRvT2kpZMXqr6FHbWf_ma4' alt='Imagen Avatar' />
+    <Image width={100} height={100} src='/assets/avatar-user.jpg' alt='Imagen Avatar' />
   )
 }
 

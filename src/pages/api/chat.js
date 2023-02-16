@@ -1,4 +1,4 @@
-const OPENAI_API_KEY = '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'
+const OPENAI_API_KEY = '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'
 
 export default async function handler (req, res) {
   if (req.method !== 'POST') return res.status(405).end()
@@ -34,6 +34,6 @@ export default async function handler (req, res) {
 
     return res.status(200).json({ response: json.choices[0].text.trim() })
   } catch (error) {
-    console.error(error)
+    return res.status(200).json({ response: 'Error en la API OpenAI' })
   }
 }
