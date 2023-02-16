@@ -3,6 +3,7 @@ import { ChatGPTLogo, PlusIcon, SendIcon } from '@/components/Icons'
 import { TypingEffect } from '@/components/TypingEffect'
 import { useMessageStore } from '@/store/messages'
 import Head from 'next/head'
+import Image from 'next/image'
 import { useRef } from 'react'
 
 function Layout ({ children }) {
@@ -33,7 +34,7 @@ function Aside () {
 
 function UserAvatar () {
   return (
-    <img src='https://media.licdn.com/dms/image/C4D03AQFth6dW_GVUtQ/profile-displayphoto-shrink_200_200/0/1642895466352?e=1681948800&v=beta&t=SLtr9RRFVSihKAGidziQcfRvT2kpZMXqr6FHbWf_ma4' alt='Imagen Avatar' />
+    <Image src='https://media.licdn.com/dms/image/C4D03AQFth6dW_GVUtQ/profile-displayphoto-shrink_200_200/0/1642895466352?e=1681948800&v=beta&t=SLtr9RRFVSihKAGidziQcfRvT2kpZMXqr6FHbWf_ma4' alt='Imagen Avatar' />
   )
 }
 
