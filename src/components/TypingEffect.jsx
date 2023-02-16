@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-const useTypingEffect = (text) => {
+export const useTypingEffect = (text) => {
   const [displayText, setDisplayText] = useState('')
   const [index, setIndex] = useState(0)
   const [showCursor, setShowCursor] = useState(true)
