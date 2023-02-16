@@ -32,7 +32,6 @@ export function ChatGPTLogo () {
       viewBox='0 0 41 41'
     >
       <path fill='currentColor' d={`${d}`} />
-
     </svg>
   )
 }
@@ -54,7 +53,6 @@ export function SendIcon () {
     >
       <path d='M22 2L11 13' />
       <path d='M22 2L15 22 11 13 2 9 22 2z' />
-
     </svg>
   )
 }
