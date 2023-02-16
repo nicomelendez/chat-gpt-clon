@@ -1,6 +1,7 @@
 import { TypingEffect } from '../TypingEffect.jsx'
 import { ChatGPTLogo } from '../utils/Icons'
 import { Avatar } from '../utils/Avatar'
+import Image from 'next/image.js'
 
 function UserAvatar () {
   return (
